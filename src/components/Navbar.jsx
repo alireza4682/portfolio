@@ -57,7 +57,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
             className="rounded-full bg-rose-500 p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <img alt="menu-icon" src="../assets/three-dots.png" />
+            <img alt="menu-icon" src="../assets/menu-icon.png" />
           </button>
         )}
       </div>
