@@ -4,6 +4,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.png";
 import closeIcon from "../assets/close-icon.png";
 
+const navCategories = ["Home", "Skills", "Projects", "Testimonials", "Contact"];
+
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
@@ -29,31 +31,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         <h4 className="font-Roboto text-3xl font-bold">JE</h4>
         {isAboveSmallScreen ? (
           <div className="flex justify-between gap-16 font-sans text-sm font-semibold">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Skills"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Projects"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Testimonials"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Contacts"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            {navCategories.map((cat) => {
+              <Link
+                page={cat}
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />;
+            })}
           </div>
         ) : (
           <button
@@ -79,31 +63,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               </button>
             </div>
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-blue-900">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Testimonials"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contacts"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
+              {navCategories.map((cat) => {
+                <Link
+                  page={cat}
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />;
+              })}
             </div>
           </div>
         )}
