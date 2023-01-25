@@ -67,7 +67,7 @@ const Projects = () => {
 
       <div className="flex justify-center">
         <motion.div
-          className="sm:grid sm:grid-col-3"
+          className="sm:grid sm:grid-cols-3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
