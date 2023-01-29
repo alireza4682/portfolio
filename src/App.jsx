@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#03001C]">
+    <div className="bg-black">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -61,3 +61,8 @@ function App() {
 }
 
 export default App;
+
+//TODO:
+//1-fix Pic and aboveaverage always false
+//2-choose a color pallete
+//3-fix contact not anchored

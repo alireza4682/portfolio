@@ -1,5 +1,5 @@
 import linkedinImg from "../assets/linkedin.png";
-import githubImg from "../assets/facebook.png";
+import githubImg from "../assets/github.png";
 
 const SocialMediaIcons = () => {
   return (
@@ -18,7 +18,11 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="facebook-link" src={githubImg} />
+        <img
+          alt="facebook-link"
+          src={githubImg}
+          className="w-[30px] h-[30px]"
+        />
       </a>
     </div>
   );
