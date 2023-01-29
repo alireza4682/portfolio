@@ -1,13 +1,12 @@
 import LineGradient from "./LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import skillsImg from "../assets/skills-image.png";
+import skillsImg from "../assets/skills.png";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="skills" className="pt-10 pb-24">
-      {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
           className="md:w-1/3"
@@ -34,19 +33,25 @@ const MySkills = () => {
           {isAboveLarge ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
+              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1] before:rounded-2xl"
             >
-              <img alt="skills" className="z-10" src={skillsImg} />
+              <img
+                alt="skills"
+                className="z-10 bg-violet-200 p-10 rounded-2xl max-w-2xl"
+                src={skillsImg}
+              />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src={skillsImg} />
+            <img
+              alt="skills"
+              className="z-10 bg-violet-200 p-5 rounded-2xl max-w-xl"
+              src={skillsImg}
+            />
           )}
         </div>
       </div>
 
-      {/* SKILLS */}
       <div className="md:flex md:justify-between mt-16 gap-32">
-        {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -62,7 +67,7 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">01</p>
               <p className="font-serif font-semibold text-3xl mt-3">
-                Experience
+                Zero To Mastery Student
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
@@ -74,7 +79,6 @@ const MySkills = () => {
           </p>
         </motion.div>
 
-        {/* INNOVATIVE */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -102,7 +106,6 @@ const MySkills = () => {
             faucibus a
           </p>
         </motion.div>
-        {/* IMAGINATIVE */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
