@@ -47,13 +47,13 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl z-10 text-center md:text-start">
-            Jane {""}
+          <p className="text-6xl z-10 text-center md:text-start font-serif">
+            Alireza{""}
             <span
               className="xs:relative xs:text-deep-blue xs:font-semibold z-20
                   xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
-              Esper
+              Arezoumandan
             </span>
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
@@ -88,7 +88,7 @@ const Landing = ({ setSelectedPage }) => {
           >
             <div
               className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex 
-            items-center justify-center font-roboto px-10"
+            items-center justify-center font-serif px-10"
             >
               Let's talk.
             </div>
