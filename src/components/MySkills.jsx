@@ -37,14 +37,14 @@ const MySkills = () => {
             >
               <img
                 alt="skills"
-                className="z-10 bg-violet-200 p-10 rounded-2xl max-w-2xl"
+                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl"
                 src={skillsImg}
               />
             </div>
           ) : (
             <img
               alt="skills"
-              className="z-10 bg-violet-200 p-5 rounded-2xl max-w-xl"
+              className="z-10 bg-fuchsia-100 p-5 rounded-2xl max-w-xl "
               src={skillsImg}
             />
           )}
@@ -67,15 +67,14 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">01</p>
               <p className="font-serif font-semibold text-3xl mt-3">
-                Zero To Mastery Student
+                former Zero To Mastery Student
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-            morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-            odio sit sagittis,
+            learned modern programing in ZTM school along side my daily
+            programing job,
           </p>
         </motion.div>
 
@@ -94,16 +93,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">02</p>
               <p className="font-serif font-semibold text-3xl mt-3">
-                Innovative
+                work experience
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-            amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-            nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-            faucibus a
+            I have been working as a frontend engineer for over 4 years now,
+            most recent as React.js developer in the best web design company in
+            south if Iran "zeus.ir"
           </p>
         </motion.div>
         <motion.div
@@ -119,18 +117,16 @@ const MySkills = () => {
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+              <p className="font-serif font-semibold text-5xl">03</p>
+              <p className="font-serif font-semibold text-3xl mt-3">
+                Computer Science
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+            I am mostly proud of my knowledge in computer science and my ability
+            to solve and break down problems
           </p>
         </motion.div>
       </div>
