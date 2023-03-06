@@ -18,7 +18,7 @@ const Contacts = () => {
   };
 
   return (
-    <section id="contact" className="py-48">
+    <section id="contacts" className="py-48">
       <motion.div
         className="flex justify-end w-full"
         initial="hidden"
