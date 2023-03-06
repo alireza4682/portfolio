@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import contactImg from "../assets/contact-image.jpeg";
 
-const Contact = () => {
+const Contacts = () => {
   const {
     register,
     trigger,
@@ -136,4 +136,4 @@ const Contact = () => {
     </section>
   );
 };
-export default Contact;
+export default Contacts;

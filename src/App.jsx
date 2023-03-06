@@ -7,7 +7,7 @@ import LineGradient from "./components/LineGradient";
 import MySkills from "./components/MySkills";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
+import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-stone-900">
+    <div className="bg-black">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -53,7 +53,7 @@ function App() {
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Contact />
+        <Contacts />
       </div>
       <Footer />
     </div>
