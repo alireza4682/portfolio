@@ -37,7 +37,7 @@ const MySkills = () => {
             >
               <img
                 alt="skills"
-                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl bg-white"
+                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl bg-pink-50 shadow-lg shadow-pink-300"
                 src={skillsImg}
               />
             </div>
