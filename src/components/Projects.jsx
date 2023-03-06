@@ -17,7 +17,7 @@ const projectVarient = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, text }) => {
   const projectTitle = title.split(" ").join("-").toLowerCase();
   const projectURL = getImageUrl(projectTitle);
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
@@ -27,10 +27,7 @@ const Project = ({ title }) => {
     <motion.div variants={projectVarient} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-serif">{title}</p>
-        <p className="mt-7">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-          blanditiis!
-        </p>
+        <p className="mt-7 text-amber-700">{text}</p>
       </div>
       <img src={projectURL} alt={projectTitle} />
     </motion.div>
@@ -76,11 +73,17 @@ const Projects = () => {
           >
             BEUTIFUL USER INTERFACE
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project title="book store" text={"SPA Reactjs SASS"} />
+          <Project title="e-commerce" text={"Nextjs TypeScript SASS GraphQL"} />
 
-          <Project title="Project 3" />
-          <Project title="Project 4" />
+          <Project
+            title="e-commerce2"
+            text={"SPA Reactjs TypeScript SASS Redux-Saga FireStore"}
+          />
+          <Project
+            title="DataMuse FrontEnd"
+            text={"Reactjs TypeScript TailwindCSS Redux-toolkit"}
+          />
 
           <div
             className="flex justify-center text-center items-center  bg-blue max-w-[600px] max-h-[600px]
