@@ -59,10 +59,7 @@ const Projects = () => {
             <LineGradient width="w-1/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at.
-        </p>
+        <p className="mt-10 mb-10">few of projects I did in the past.</p>
       </motion.div>
 
       <div className="flex justify-center">
@@ -74,7 +71,7 @@ const Projects = () => {
           variants={container}
         >
           <div
-            className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px]
+            className="flex justify-center text-center items-center  bg-red max-w-[600px] max-h-[600px]
                 text-2xl font-serif font-semibold"
           >
             BEUTIFUL USER INTERFACE
@@ -86,7 +83,7 @@ const Projects = () => {
           <Project title="Project 4" />
 
           <div
-            className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px]
+            className="flex justify-center text-center items-center  bg-blue max-w-[600px] max-h-[600px]
                 text-2xl font-serif font-semibold"
           >
             SMOOTH USER EXPERIENCE
