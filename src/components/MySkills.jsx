@@ -24,8 +24,10 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+            HTML, CSS, SASS TailwindCSSJavaScriptTypeScriptReactReduxRedux
+            toolkitRedux sagaNext.jsGraphQLGitGithub
+            ActionsDockerNode.jsExpress.jsSQLMongoDBFirestoreOAuth 2.0Firebase
+            AuthPassportJsJest
           </p>
         </motion.div>
 
@@ -44,7 +46,7 @@ const MySkills = () => {
           ) : (
             <img
               alt="skills"
-              className="z-10  p-5 rounded-2xl max-w-xl bg-white "
+              className="z-10  p-5 rounded-2xl max-w-xl  bg-pink-50 shadow-pink-300 shadow-lg"
               src={skillsImg}
             />
           )}

@@ -53,8 +53,10 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            best frontend engineer in the world who can use redux-saga to
-            control the flow of app to make it natural
+            I am a frontend engineer with 5+ years of experience in JavaScript
+            and 3+ years of experience in Reactjs, TypeScript and Redux. I know
+            my way around backend concepts with Nodejs and have 2+ years of
+            experience working with GraphQl, SQL, MongoDB.
           </p>
         </motion.div>
 
@@ -72,15 +74,15 @@ const Landing = ({ setSelectedPage }) => {
           <AnchorLink
             className="bg-gradient-rainbow text-deep-blue rounded-sm py-3 px-7 font-semibold
             hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => setSelectedPage("contacts")}
+            href="#contacts"
           >
             Contact Me
           </AnchorLink>
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => setSelectedPage("contacts")}
+            href="#contacts"
           >
             <div
               className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex 

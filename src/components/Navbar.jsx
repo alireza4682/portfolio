@@ -21,10 +21,10 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  const navebarBackground = isTopOfPage ? "" : "bg-red";
+  const navebarBackground = isTopOfPage ? "" : "bg-white/10 backdrop-blur-xl";
 
   return (
-    <nav className={`${navebarBackground} z-40 w-full fixed top-0 py-1`}>
+    <nav className={`${navebarBackground} z-40 w-full fixed top-0 py-1 `}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-serif text-3xl font-bold text-yellow">
           A<span className="text-rose-400">A</span>
