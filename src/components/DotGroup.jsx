@@ -43,7 +43,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         }
             w-3 h-3 rounded-full`}
         href="#contacts"
-        onClick={() => setSelectedPage("contact")}
+        onClick={() => setSelectedPage("contacts")}
       />
     </div>
   );
