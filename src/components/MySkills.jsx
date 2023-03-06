@@ -44,7 +44,7 @@ const MySkills = () => {
           ) : (
             <img
               alt="skills"
-              className="z-10 bg-fuchsia-100 p-5 rounded-2xl max-w-xl bg-white "
+              className="z-10  p-5 rounded-2xl max-w-xl bg-white "
               src={skillsImg}
             />
           )}
