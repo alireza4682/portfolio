@@ -52,7 +52,7 @@ const Landing = ({ setSelectedPage }) => {
               Arezoumandan
             </span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
+          <p className="mt-10 mb-7 text-sm text-center md:text-start font-caudex">
             I am a frontend engineer with 5+ years of experience in JavaScript
             and 3+ years of experience in Reactjs, TypeScript and Redux. I know
             my way around backend concepts with Nodejs and have 2+ years of
