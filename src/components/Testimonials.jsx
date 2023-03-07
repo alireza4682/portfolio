@@ -39,15 +39,18 @@ const Testimonials = () => {
           }}
         >
           <div className="relative">
-            <img
-              src={aslan}
-              alt="Aslan Mehrabi"
-              className="rounded-full absolute -top-[300px]"
-            />
+            <a href="https://www.linkedin.com/in/aslan-mehrabi/">
+              <img
+                src={aslan}
+                alt="Aslan Mehrabi"
+                className="rounded-full absolute -top-[300px]"
+              />
+            </a>
             <p className="font-caudex text-6xl">"</p>
             <p className="text-justify text-md  font-caudex">
-              Alireza is a collaborative team player. He is always willing to
-              goes out of his way to help others understand complex concepts
+              Alireza is a team player and always willing to take on different
+              roles and responsibilities in order to help the team reach its
+              goals.
             </p>
           </div>
         </motion.div>
@@ -64,11 +67,13 @@ const Testimonials = () => {
           }}
         >
           <div className="relative">
-            <img
-              src={yashar}
-              alt="Yashar Kiarashi"
-              className="rounded-full absolute -top-[240px]"
-            />
+            <a href="https://www.linkedin.com/in/yashar-kiarashinejad/">
+              <img
+                src={yashar}
+                alt="Yashar Kiarashi"
+                className="rounded-full absolute -top-[240px]"
+              />
+            </a>
             <p className=" text-6xl font-caudex">"</p>
             <p className=" text-md font-caudex text-justify">
               Alireza is a creative and analytical problem solver, always

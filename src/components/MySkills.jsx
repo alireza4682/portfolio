@@ -23,11 +23,19 @@ const MySkills = () => {
             MY <span className="text-red">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            HTML, CSS, SASS TailwindCSSJavaScriptTypeScriptReactReduxRedux
-            toolkitRedux sagaNext.jsGraphQLGitGithub
-            ActionsDockerNode.jsExpress.jsSQLMongoDBFirestoreOAuth 2.0Firebase
-            AuthPassportJsJest
+          <p className="mt-10 mb-7 font-caudex">
+            <span className="text-lg text-amber-200">Styling: </span>CSS, SASS,
+            TailwindCSS<br></br>
+            <span className="text-lg text-sky-400">Languages: </span>HTML,
+            JavaScript, TypeScript, python <br></br>
+            <span className="text-lg text-pink-400">Frontend tech: </span>{" "}
+            Reactjs, Redux, Redux toolkit, Redux saga, Nextjs <br />
+            <span className="text-lg text-orange-400">DB related: </span>{" "}
+            GraphQL, PostgreSQL, MongoDB, Firebase, supabase <br />
+            <span className="text-lg text-cyan-400">Testing: </span> Jest,
+            Cypress, storybookjs <br />
+            <span className="text-lg text-purple-400">Other: </span>
+            Git, Github Actions, Docker, Nodejs, Expressjs, Passportjs
           </p>
         </motion.div>
 
@@ -68,15 +76,16 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">01</p>
-              <p className="font-serif font-semibold text-3xl mt-3">
-                former Zero To Mastery Student
+              <p className="font-caudex font-semibold text-3xl mt-3">
+                Frontend engineer
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            learned modern programing in ZTM school along side my daily
-            programing job,
+          <p className="mt-5 font-caudex">
+            Designed and developed efficient, scalable, and reusable frontend
+            infrastructure, components, and accessible user interfaces following
+            best engineering practices with lean/agile values & principles.
           </p>
         </motion.div>
 
@@ -94,16 +103,16 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">02</p>
-              <p className="font-serif font-semibold text-3xl mt-3">
-                work experience
+              <p className="font-caudex font-semibold text-3xl mt-3">
+                team experience
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            I have been working as a frontend engineer for over 4 years now,
-            most recent as React.js developer in the best web design company in
-            south if Iran "zeus.ir"
+          <p className="mt-5 font-caudex">
+            Worked collaboratively in an agile team with product owner, UX
+            designer, and experienced engineers to turn business requirements
+            into new features and a great user experience.
           </p>
         </motion.div>
         <motion.div
@@ -120,15 +129,16 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">03</p>
-              <p className="font-serif font-semibold text-3xl mt-3">
+              <p className="font-caudex font-semibold text-3xl mt-3">
                 Computer Science
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-amber-300 absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            I am mostly proud of my knowledge in computer science and my ability
-            to solve and break down problems
+          <p className="mt-5 font-caudex">
+            experienced in using algorithms and data structures concepts to
+            identify and break down problems <br /> An endless passion for
+            solving complex problems and creating innovative solutions.
           </p>
         </motion.div>
       </div>

@@ -56,7 +56,9 @@ const Projects = () => {
             <LineGradient width="w-1/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">few of projects I did in the past.</p>
+        <p className="mt-10 mb-10 font-caudex">
+          few of projects I did in the past.
+        </p>
       </motion.div>
 
       <div className="flex justify-center">
@@ -71,14 +73,14 @@ const Projects = () => {
             className="flex justify-center text-center items-center  bg-red max-w-[600px] max-h-[600px]
                 text-2xl font-serif font-semibold"
           >
-            BEUTIFUL USER INTERFACE
+            SMOOTH USER EXPERIENCE
           </div>
           <Project title="book store" text={"SPA Reactjs SASS"} />
           <Project title="e-commerce" text={"Nextjs TypeScript SASS GraphQL"} />
 
           <Project
             title="e-commerce2"
-            text={"SPA Reactjs TypeScript SASS Redux-Saga FireStore"}
+            text={"SPA Reactjs TypeScript SASS Redux-Saga Firebase"}
           />
           <Project
             title="DataMuse FrontEnd"
@@ -89,7 +91,7 @@ const Projects = () => {
             className="flex justify-center text-center items-center  bg-blue max-w-[600px] max-h-[600px]
                 text-2xl font-serif font-semibold"
           >
-            SMOOTH USER EXPERIENCE
+            PACKED WITH LOTS OF FUNCTIONALITIES
           </div>
         </motion.div>
       </div>
