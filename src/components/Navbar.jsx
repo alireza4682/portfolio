@@ -30,7 +30,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           A<span className="text-rose-400">A</span>
         </h4>
         {isAboveSmallScreen ? (
-          <div className="flex justify-between gap-16 font-sans text-sm font-semibold">
+          <div
+            className={`flex justify-between gap-16 font-sans text-sm font-semibold`}
+          >
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -59,7 +61,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
-            className="rounded-full bg-rose-500 p-2"
+            className=" p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img
@@ -70,7 +72,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </button>
         )}
         {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+          <div className="fixed right-0 top-0 h-full bg-blue/50 backdrop-blur-lg w-[300px]">
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <img
@@ -80,7 +82,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 />
               </button>
             </div>
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue h-full">
               <Link
                 page="Home"
                 selectedPage={selectedPage}
