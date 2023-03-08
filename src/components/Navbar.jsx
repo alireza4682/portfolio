@@ -9,7 +9,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
-      hover:text-yellow-500 transition duration-500`}
+      hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -21,7 +21,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  const navebarBackground = isTopOfPage ? "" : "bg-white/10 backdrop-blur-xl";
+  const navebarBackground = isTopOfPage ? "" : "bg-white";
 
   return (
     <nav className={`${navebarBackground} z-40 w-full fixed top-0 py-1 `}>
@@ -82,7 +82,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 />
               </button>
             </div>
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue h-full">
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-cyan-300 font-caudex h-full">
               <Link
                 page="Home"
                 selectedPage={selectedPage}
