@@ -3,6 +3,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.png";
 import closeIcon from "../assets/close-icon.png";
+import { useRef } from "react";
+import useOnClickOutside from "../hooks/clickoutside";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -19,9 +21,14 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+  const awayRef = useRef(null);
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  const navebarBackground = isTopOfPage ? "" : "bg-gray-700";
+  const navebarBackground = isTopOfPage ? "" : "bg-cyan-300/90 ";
+
+  useOnClickOutside(awayRef, () => {
+    setIsMenuToggled(false);
+  });
 
   return (
     <nav className={`${navebarBackground} z-40 w-full fixed top-0 py-1 `}>
@@ -72,7 +79,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </button>
         )}
         {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-0 top-0 h-full bg-blue/50 backdrop-blur-lg w-[300px]">
+          <div
+            className="fixed right-0 top-0 h-full bg-blue/50 backdrop-blur-lg w-[300px]"
+            ref={awayRef}
+          >
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <img
