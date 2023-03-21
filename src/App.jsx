@@ -15,37 +15,6 @@ function App() {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  const landingRef = useRef(null);
-  const isLandingInView = useIsInViewport(landingRef);
-
-  const skillRef = useRef(null);
-  const isSkillInView = useIsInViewport(skillRef);
-
-  const projectRef = useRef(null);
-  const isProjectInview = useIsInViewport(projectRef);
-
-  const testimonialRef = useRef(null);
-  const isTestimonialInView = useIsInViewport(testimonialRef);
-
-  const contactRef = useRef(null);
-  const isContactInView = useIsInViewport(contactRef);
-
-  const whatInViewport = isLandingInView
-    ? landingRef
-    : isSkillInView
-    ? skillRef
-    : isProjectInview
-    ? projectRef
-    : isTestimonialInView
-    ? testimonialRef
-    : isContactInView
-    ? contactRef
-    : landingRef;
-
-  useEffect(() => {
-    setSelectedPage(whatInViewport);
-  }, [whatInViewport]);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) setIsTopOfPage(true);
