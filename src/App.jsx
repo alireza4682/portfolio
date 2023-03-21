@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import useMediaQuery from "./hooks/useMediaQuery";
-import Navbar from "./components/Navbar";
+import Contacts from "./components/Contacts";
 import DotGroup from "./components/DotGroup";
+import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import LineGradient from "./components/LineGradient";
 import MySkills from "./components/MySkills";
+import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
-import Contacts from "./components/Contacts";
-import Footer from "./components/Footer";
-import useIsInViewport from "./hooks/inViewPort";
+import useMediaQuery from "./hooks/useMediaQuery";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -18,6 +17,34 @@ function App() {
 
   const landingRef = useRef(null);
   const isLandingInView = useIsInViewport(landingRef);
+
+  const skillRef = useRef(null);
+  const isSkillInView = useIsInViewport(skillRef);
+
+  const projectRef = useRef(null);
+  const isProjectInview = useIsInViewport(projectRef);
+
+  const testimonialRef = useRef(null);
+  const isTestimonialInView = useIsInViewport(testimonialRef);
+
+  const contactRef = useRef(null);
+  const isContactInView = useIsInViewport(contactRef);
+
+  const whatInViewport = isLandingInView
+    ? landingRef
+    : isSkillInView
+    ? skillRef
+    : isProjectInview
+    ? projectRef
+    : isTestimonialInView
+    ? testimonialRef
+    : isContactInView
+    ? contactRef
+    : landingRef;
+
+  useEffect(() => {
+    setSelectedPage(whatInViewport);
+  }, [whatInViewport]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,19 +73,19 @@ function App() {
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <MySkills />
+        <MySkills ref={skillRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto ">
-        <Projects />
+        <Projects ref={projectRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
+        <Testimonials ref={testimonialRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Contacts />
+        <Contacts ref={contactRef} />
       </div>
       <Footer />
     </div>
@@ -66,8 +93,3 @@ function App() {
 }
 
 export default App;
-
-//TODO:
-//1-fix Pic and aboveaverage always false
-//2-choose a color pallete
-//3-fix contact not anchored
