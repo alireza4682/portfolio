@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./components/Navbar";
 import DotGroup from "./components/DotGroup";
@@ -9,11 +9,16 @@ import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import useIsInViewport from "./hooks/inViewPort";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+
+  const landingRef = useRef(null);
+  const isLandingInView = useIsInViewport(landingRef);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) setIsTopOfPage(true);
@@ -37,7 +42,7 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing setSelectedPage={setSelectedPage} />
+        <Landing setSelectedPage={setSelectedPage} ref={landingRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
