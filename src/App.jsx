@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Contacts from "./components/Contacts";
 import DotGroup from "./components/DotGroup";
 import Footer from "./components/Footer";
@@ -9,35 +9,11 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import useMediaQuery from "./hooks/useMediaQuery";
-// import { useInView } from "framer-motion";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const ref5 = useRef(null);
-
-  // const inView1 = useInView(ref1);
-  // const inView2 = useInView(ref1);
-  // const inView3 = useInView(ref1);
-  // const inView4 = useInView(ref1);
-  // const inView5 = useInView(ref1);
-
-  // const whatIsInView = () => {
-  //   if (inView1) setSelectedPage("home");
-  //   if (inView2) setSelectedPage("skills");
-  //   if (inView3) setSelectedPage("projects");
-  //   if (inView4) setSelectedPage("testimonials");
-  //   if (inView5) setSelectedPage("contacts");
-  //   console.log(selectedPage);
-  // };
-
-  // window.addEventListener("scroll", whatIsInView());
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,19 +41,19 @@ function App() {
         <Landing setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full" ref={ref2}>
+      <div className="w-5/6 mx-auto md:h-full">
         <MySkills />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto " ref={ref3}>
+      <div className="w-5/6 mx-auto ">
         <Projects />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full" ref={ref4}>
+      <div className="w-5/6 mx-auto md:h-full">
         <Testimonials />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full" ref={ref5}>
+      <div className="w-5/6 mx-auto md:h-full">
         <Contacts />
       </div>
       <Footer />
