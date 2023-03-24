@@ -24,7 +24,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const awayRef = useRef(null);
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  const navebarBackground = isTopOfPage ? "" : "bg-gray-600/90 ";
+  const navebarBackground = isTopOfPage ? "" : "bg-gray-900/90 ";
 
   useOnClickOutside(awayRef, () => {
     setIsMenuToggled(false);
