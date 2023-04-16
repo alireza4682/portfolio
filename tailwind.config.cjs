@@ -30,6 +30,13 @@ module.exports = {
         person2: "url('./assets/person-2.png')",
         person3: "url('./assets/person-3.png')",
       },
+      backgroundSize: {
+        "size-200": "200% 200%",
+      },
+      backgroundPosition: {
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
+      },
     },
     screens: {
       xs: "480px",

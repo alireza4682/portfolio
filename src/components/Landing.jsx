@@ -44,19 +44,31 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl z-10 text-center md:text-start font-serif text-yellow">
-            Alireza{" "}
+            <h1>Alireza</h1>
+
             <span
               className="xs:relative xs:text-rose-400 xs:font-semibold z-20 
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
-              Arezoumandan
+              <h2>Arezoumandan</h2>
             </span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start font-caudex">
-            I am a frontend engineer with 5+ years of experience in JavaScript
-            and 3+ years of experience in Reactjs, TypeScript and Redux. I know
-            my way around backend concepts with Nodejs and have 2+ years of
-            experience working with GraphQl, SQL, MongoDB.
+          <p className="mt-10  text-sm text-center md:text-start font-caudex">
+            I am a Frontend engineer with :
+          </p>
+          <p className="  text-sm text-center md:text-start font-caudex">
+            5+ years of experience in JavaScript and 3+ years of experience in
+            Reactjs, TypeScript, Redux and RESTful APIs.
+          </p>
+          <p className="  text-sm text-center md:text-start font-caudex">
+            2+ years of experience working with Nextjs, GraphQl and MongoDB.
+          </p>
+          <p className="  text-sm text-center md:text-start font-caudex">
+            2+ years of experience working in cross functional environment 2+
+            years of test driven development.
+          </p>
+          <p className=" mb-7 text-sm text-center md:text-start font-caudex">
+            1+ year of experience working with Nodejs and Expressjs
           </p>
         </motion.div>
 

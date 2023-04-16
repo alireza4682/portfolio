@@ -70,10 +70,10 @@ const Projects = () => {
           variants={container}
         >
           <div
-            className="flex justify-center text-center items-center  bg-red max-w-[600px] max-h-[600px]
-                text-2xl font-serif font-semibold"
+            className="flex justify-center text-center items-center  bg-gradient-to-r from-pink-900 to-indigo-600 max-w-[600px] max-h-[600px]
+                text-2xl font-serif font-semibold bg-pos-0 hover:bg-pos-100 bg-size-200 transition-all duration-1000"
           >
-            SMOOTH USER EXPERIENCE
+            <h1 className="text-amber-50">Smooth user experience</h1>
           </div>
           <Project title="book store" text={"SPA Reactjs SASS"} />
           <Project title="e-commerce" text={"Nextjs TypeScript SASS GraphQL"} />
@@ -88,10 +88,10 @@ const Projects = () => {
           />
 
           <div
-            className="flex justify-center text-center items-center  bg-blue max-w-[600px] max-h-[600px]
-                text-2xl font-serif font-semibold"
+            className="flex justify-center text-center items-center  bg-gradient-to-r from-purple-600 to-fuchsia-900 max-w-[600px] max-h-[600px]
+                text-xl md:text-2xl font-serif font-semibold bg-pos-0 hover:bg-pos-100 bg-size-200 transition-all duration-1000"
           >
-            PACKED WITH LOTS OF FUNCTIONALITIES
+            <h1 className="text-amber-50">Scalable and performant</h1>
           </div>
         </motion.div>
       </div>
