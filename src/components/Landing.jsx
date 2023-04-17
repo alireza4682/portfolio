@@ -43,7 +43,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl z-10 text-center md:text-start font-serif text-yellow">
+          <p className="text-6xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
             <h1>Alireza</h1>
 
             <span

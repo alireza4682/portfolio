@@ -25,17 +25,19 @@ const MySkills = () => {
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7 font-caudex">
             <span className="text-lg text-amber-200">Styling: </span>CSS, SASS,
-            TailwindCSS<br></br>
+            TailwindCSS, Material-UI<br></br>
             <span className="text-lg text-sky-400">Languages: </span>HTML,
             JavaScript, TypeScript, python <br></br>
             <span className="text-lg text-pink-400">Frontend tech: </span>{" "}
             Reactjs, Redux, Redux toolkit, Redux saga, Nextjs <br />
             <span className="text-lg text-orange-400">DB related: </span>{" "}
-            GraphQL, PostgreSQL, MongoDB, Firebase, supabase <br />
+            GraphQL, PostgreSQL, MongoDB, Firebase, supabase, tRPC, Prisma ORM{" "}
+            <br />
             <span className="text-lg text-cyan-400">Testing: </span> Jest,
             Cypress, storybookjs <br />
             <span className="text-lg text-purple-400">Other: </span>
-            Git, Github Actions, Docker, Nodejs, Expressjs, Passportjs
+            Git, Github Actions, Docker, Nodejs, Expressjs, Passportjs,
+            Framer-motion
           </p>
         </motion.div>
 
