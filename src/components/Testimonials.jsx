@@ -28,7 +28,7 @@ const Testimonials = () => {
       </motion.div>
       <div className="md:flex md:justify-between gap-8">
         <motion.div
-          className={`bg-blue ${testimonialStyles} `}
+          className={`bg-blue ${testimonialStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -43,7 +43,7 @@ const Testimonials = () => {
               <img
                 src={aslan}
                 alt="Aslan Mehrabi"
-                className="rounded-full absolute -top-[300px]"
+                className="rounded-full absolute -top-[300px] border-8 border-cyan-700 shadow-xl"
               />
             </a>
             <p className="font-caudex text-6xl">"</p>
@@ -66,16 +66,16 @@ const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-          <div className="relative">
+          <div className="relative top-[60px]">
             <a href="https://www.linkedin.com/in/yashar-kiarashinejad/">
               <img
                 src={yashar}
                 alt="Yashar Kiarashi"
-                className="rounded-full absolute -top-[240px]"
+                className="rounded-full absolute -top-[120px] border-8 border-rose-900 shadow-2xl"
               />
             </a>
             <p className=" text-6xl font-caudex">"</p>
-            <p className=" text-md font-caudex text-justify">
+            <p className=" text-md font-caudex text-justify bg-rose-900 p-10 rounded-xl w-[400px]">
               Alireza is a creative and analytical problem solver, always
               striving to find the most efficient solution. He is also a hard
               worker, consistently putting in the extra effort to ensure that
