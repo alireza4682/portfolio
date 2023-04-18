@@ -9,11 +9,18 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import useMediaQuery from "./hooks/useMediaQuery";
+import { useInView } from "react-hook-inview";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+
+  const [landingRef, landingInView] = useInView({ threshold: 0.5 });
+  const [mySkillsRef, mySkillsInView] = useInView({ threshold: 0.5 });
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.5 });
+  const [testimonialsRef, testimonialsInView] = useInView({ threshold: 0.5 });
+  const [contactsRef, contactsInView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +30,20 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (landingInView) setSelectedPage("home");
+    if (mySkillsInView) setSelectedPage("mySkills");
+    if (projectsInView) setSelectedPage("projects");
+    if (testimonialsInView) setSelectedPage("testimonials");
+    if (contactsInView) setSelectedPage("contacts");
+  }, [
+    landingInView,
+    mySkillsInView,
+    projectsInView,
+    testimonialsInView,
+    contactsInView,
+  ]);
 
   return (
     <div className="bg-black">
@@ -38,23 +59,23 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing setSelectedPage={setSelectedPage} />
+        <Landing setSelectedPage={setSelectedPage} ref={landingRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <MySkills />
+        <MySkills ref={mySkillsRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto ">
-        <Projects />
+        <Projects ref={projectsRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
+        <Testimonials ref={testimonialsRef} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Contacts />
+        <Contacts ref={contactsRef} />
       </div>
       <Footer />
     </div>
