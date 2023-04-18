@@ -2,7 +2,8 @@ import LineGradient from "./LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+emailjs.init();
 
 const Contacts = () => {
   const {
@@ -11,29 +12,28 @@ const Contacts = () => {
     formState: { errors },
   } = useForm();
 
+  const [sent, setSent] = useState(false);
+
   const form = useRef();
   const onSubmit = async (e) => {
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    } else {
-      e.preventDefault();
-      emailjs
-        .sendForm(
-          "service_vtwefxk",
-          "template_yxsbc0q",
-          form.current,
-          "8YF-sP0NN7oLqa-0k"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    }
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vtwefxk",
+        "template_yxsbc0q",
+        form.current,
+        "8YF-sP0NN7oLqa-0k"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -90,11 +90,12 @@ const Contacts = () => {
               className="w-full bg-indigo-700 font-semibold placeholder-black p-3 placeholder rounded-lg outline-none"
               type="text"
               placeholder="NAME"
-              {...register("name", {
+              {...register("user_name", {
                 required: true,
                 maxLength: 100,
               })}
               name="user_name"
+              id="user_name"
             />
             {errors.name && (
               <p className="text-red mt-1">
@@ -107,11 +108,12 @@ const Contacts = () => {
               className="w-full bg-indigo-700 font-semibold placeholder-black p-3 mt-5  rounded-lg outline-none"
               type="text"
               placeholder="EMAIL"
-              {...register("email", {
+              {...register("user_email", {
                 required: true,
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A_Z]{2,}$/i,
               })}
               name="user_email"
+              id="user_email"
             />
             {errors.email && (
               <p className="text-red mt-1">
@@ -126,11 +128,12 @@ const Contacts = () => {
               placeholder="MESSAGE"
               rows="4"
               cols="50"
-              {...register("email", {
+              {...register("message", {
                 required: true,
                 maxLength: 2000,
               })}
               name="message"
+              id="message"
             />
             {errors.message && (
               <p className="text-red mt-1">
@@ -145,10 +148,12 @@ const Contacts = () => {
               className="bg-sky-400 font-semibold text-black mt-5 hover:bg-red p-2 px-5 rounded-lg 
                         hover:text-white transition duration-500"
               value="Send"
+              disabled={sent}
             >
               SEND ME A MESSAGE
             </button>
           </form>
+          <div>{`${sent ? "sent" : ""}`}</div>
         </motion.div>
       </div>
     </section>
