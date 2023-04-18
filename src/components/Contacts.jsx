@@ -93,7 +93,7 @@ const Contacts = () => {
               placeholder="EMAIL"
               {...register("email", {
                 required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A_Z]{2,}$/i,
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
               })}
             />
             {errors.email && (
@@ -109,7 +109,7 @@ const Contacts = () => {
               placeholder="MESSAGE"
               rows="4"
               cols="50"
-              {...register("email", {
+              {...register("message", {
                 required: true,
                 maxLength: 2000,
               })}

@@ -43,16 +43,15 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
-            <h1>Alireza</h1>
-
+          <h1 className="text-6xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
+            Alireza
             <span
               className="xs:relative xs:text-rose-400 xs:font-semibold z-20 
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
               <h2>Arezoumandan</h2>
             </span>
-          </p>
+          </h1>
           <p className="mt-10  text-sm text-center md:text-start font-caudex">
             I am a Frontend engineer with :
           </p>
