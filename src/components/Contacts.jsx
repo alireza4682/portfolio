@@ -1,6 +1,8 @@
 import LineGradient from "./LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const Contacts = () => {
   const {
@@ -9,10 +11,28 @@ const Contacts = () => {
     formState: { errors },
   } = useForm();
 
+  const form = useRef();
   const onSubmit = async (e) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
+    } else {
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          "service_vtwefxk",
+          "template_yxsbc0q",
+          form.current,
+          "8YF-sP0NN7oLqa-0k"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
 
@@ -65,12 +85,7 @@ const Contacts = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-            action="https://fromsubmit.co/alirezaarezoumandan1@gmail.com"
-            method="POST"
-          >
+          <form target="_blank" onSubmit={onSubmit} method="POST" ref={form}>
             <input
               className="w-full bg-indigo-700 font-semibold placeholder-black p-3 placeholder rounded-lg outline-none"
               type="text"
@@ -79,6 +94,7 @@ const Contacts = () => {
                 required: true,
                 maxLength: 100,
               })}
+              name="user_name"
             />
             {errors.name && (
               <p className="text-red mt-1">
@@ -93,8 +109,9 @@ const Contacts = () => {
               placeholder="EMAIL"
               {...register("email", {
                 required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A_Z]{2,}$/i,
               })}
+              name="user_email"
             />
             {errors.email && (
               <p className="text-red mt-1">
@@ -109,10 +126,11 @@ const Contacts = () => {
               placeholder="MESSAGE"
               rows="4"
               cols="50"
-              {...register("message", {
+              {...register("email", {
                 required: true,
                 maxLength: 2000,
               })}
+              name="message"
             />
             {errors.message && (
               <p className="text-red mt-1">
@@ -126,6 +144,7 @@ const Contacts = () => {
               type="submit"
               className="bg-sky-400 font-semibold text-black mt-5 hover:bg-red p-2 px-5 rounded-lg 
                         hover:text-white transition duration-500"
+              value="Send"
             >
               SEND ME A MESSAGE
             </button>
