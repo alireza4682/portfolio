@@ -2,10 +2,10 @@ import LineGradient from "./LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 emailjs.init();
 
-const Contacts = () => {
+const Contacts = forwardRef(function Contacts(props, ref) {
   const {
     register,
     trigger,
@@ -37,7 +37,7 @@ const Contacts = () => {
   };
 
   return (
-    <section id="contacts" className="py-48">
+    <section id="contacts" className="py-48" ref={ref}>
       <motion.div
         className="flex justify-end w-full"
         initial="hidden"
@@ -158,5 +158,5 @@ const Contacts = () => {
       </div>
     </section>
   );
-};
+});
 export default Contacts;

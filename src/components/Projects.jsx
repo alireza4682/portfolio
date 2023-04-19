@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
 
@@ -34,9 +35,9 @@ const Project = ({ title, text }) => {
   );
 };
 
-const Projects = () => {
+const Projects = forwardRef(function Projects(props, ref) {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-48 pb-48" ref={ref}>
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -97,5 +98,5 @@ const Projects = () => {
       </div>
     </section>
   );
-};
+});
 export default Projects;

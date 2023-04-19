@@ -3,14 +3,16 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profilePic from "../assets/profilePic.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
+import { forwardRef } from "react";
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = forwardRef(function Landing({ setSelectedPage }, ref) {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return (
     <section
       id="home"
       className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+      ref={ref}
     >
       <div className=" basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveLarge ? (
@@ -119,6 +121,6 @@ const Landing = ({ setSelectedPage }) => {
       </div>
     </section>
   );
-};
+});
 
 export default Landing;

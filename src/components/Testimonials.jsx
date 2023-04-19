@@ -2,13 +2,14 @@ import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
 import yashar from "../assets/person-1.png";
 import aslan from "../assets/person-2.png";
+import { forwardRef } from "react";
 
-const Testimonials = () => {
+const Testimonials = forwardRef(function Testimonials(props, ref) {
   const testimonialStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col
         justify-end p-16 mt-48 before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2`;
 
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="testimonials" className="pt-32 pb-16" ref={ref}>
       <motion.div
         className="md:w-1/3 text-center md:text-left"
         initial="hidden"
@@ -107,6 +108,6 @@ const Testimonials = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Testimonials;

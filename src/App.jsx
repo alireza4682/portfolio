@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     if (landingInView) setSelectedPage("home");
-    if (mySkillsInView) setSelectedPage("mySkills");
+    if (mySkillsInView) setSelectedPage("skills");
     if (projectsInView) setSelectedPage("projects");
     if (testimonialsInView) setSelectedPage("testimonials");
     if (contactsInView) setSelectedPage("contacts");

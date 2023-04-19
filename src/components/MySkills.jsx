@@ -2,11 +2,12 @@ import LineGradient from "./LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import skillsImg from "../assets/skills2.png";
+import { forwardRef } from "react";
 
-const MySkills = () => {
+const MySkills = forwardRef(function MySkills(props, ref) {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="skills" className="pt-10 pb-24" ref={ref}>
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
           className="md:w-1/3"
@@ -146,6 +147,6 @@ const MySkills = () => {
       </div>
     </section>
   );
-};
+});
 
 export default MySkills;
