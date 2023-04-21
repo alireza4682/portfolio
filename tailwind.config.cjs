@@ -23,6 +23,7 @@ module.exports = {
       fontFamily: {
         caudex: ["caudex", "serif"],
         opensans: ["Open Sans", "sans-serif"],
+        secular: ["Secular One"],
       },
       content: {
         brush: "url('./assets/brush.png')",

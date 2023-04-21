@@ -54,21 +54,21 @@ const Landing = forwardRef(function Landing({ setSelectedPage }, ref) {
               <h2>Arezoumandan</h2>
             </span>
           </h1>
-          <p className="mt-10  text-sm text-center md:text-start font-caudex">
+          <p className="mt-10  text-sm text-center md:text-start font-caudex first-letter:text-lg">
             I am a Frontend engineer with :
           </p>
-          <p className="  text-sm text-center md:text-start font-caudex">
+          <p className="  text-sm text-center md:text-start font-caudex first-letter:text-lg">
             5+ years of experience in JavaScript and 3+ years of experience in
             Reactjs, TypeScript, Redux and RESTful APIs.
           </p>
-          <p className="  text-sm text-center md:text-start font-caudex">
+          <p className="  text-sm text-center md:text-start font-caudex first-letter:text-lg">
             2+ years of experience working with Nextjs, GraphQl and MongoDB.
           </p>
-          <p className="  text-sm text-center md:text-start font-caudex">
+          <p className="  text-sm text-center md:text-start font-caudex first-letter:text-lg">
             2+ years of experience working in cross functional environment 2+
             years of test driven development.
           </p>
-          <p className=" mb-7 text-sm text-center md:text-start font-caudex">
+          <p className=" mb-7 text-sm text-center md:text-start font-caudex first-letter:text-lg">
             1+ year of experience working with Nodejs and Expressjs
           </p>
         </motion.div>

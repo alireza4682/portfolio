@@ -44,16 +44,17 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
               <img
                 src={aslan}
                 alt="Aslan Mehrabi"
-                className="rounded-full absolute -top-[400px] border-8 border-cyan-800 shadow-2xl w-[300px]"
+                className="rounded-full absolute -top-[330px] border-8 border-cyan-800 shadow-2xl w-[300px]"
               />
             </a>
-            <p className="font-caudex text-8xl font-extrabold absolute -top-[100px]">
+            <p className="font-secular text-6xl font-extrabold absolute -top-[100px]">
               "
             </p>
             <p className="text-justify text-md  font-caudex relative -top-[40px]">
               Alireza is a team player and always willing to take on different
               roles and responsibilities in order to help the team reach its
-              goals.
+              goals.their excellent communication skills make collaborating with
+              them an absolute breeze.
             </p>
           </div>
         </motion.div>
@@ -77,7 +78,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
                 className="rounded-full absolute -top-[330px] border-8 border-rose-900 shadow-2xl w-[300px]"
               />
             </a>
-            <p className=" text-8xl font-caudex font-extrabold absolute -top-[100px]">
+            <p className=" text-6xl font-secular font-extrabold absolute -top-[100px]">
               "
             </p>
             <p className=" text-md font-caudex text-justify relative -top-[40px]">
@@ -88,23 +89,6 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
             </p>
           </div>
         </motion.div>
-        {/* <motion.div
-          className={`bg-yellow ${testimonialStyles} before:content-person3`}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, scale: 0.8 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          <p className="font-serif text-6xl">"</p>
-          <p className="text-center text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            dolorem?
-          </p>
-        </motion.div> */}
       </div>
     </section>
   );

@@ -70,9 +70,7 @@ const Contacts = forwardRef(function Contacts(props, ref) {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-        >
-          {/* <img src={contactImg} alt="contact" /> */}
-        </motion.div>
+        ></motion.div>
 
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
@@ -87,7 +85,7 @@ const Contacts = forwardRef(function Contacts(props, ref) {
         >
           <form target="_blank" onSubmit={onSubmit} method="POST" ref={form}>
             <input
-              className="w-full bg-indigo-700 font-semibold placeholder-black p-3 placeholder rounded-lg outline-none"
+              className="w-full bg-amber-50 text-black font-semibold placeholder-amber-900 p-3 placeholder rounded-lg outline-none"
               type="text"
               placeholder="NAME"
               {...register("user_name", {
@@ -105,7 +103,7 @@ const Contacts = forwardRef(function Contacts(props, ref) {
             )}
 
             <input
-              className="w-full bg-indigo-700 font-semibold placeholder-black p-3 mt-5  rounded-lg outline-none"
+              className="w-full bg-amber-50 text-black font-semibold placeholder-amber-900 p-3 mt-5  rounded-lg outline-none"
               type="text"
               placeholder="EMAIL"
               {...register("user_email", {
@@ -123,7 +121,7 @@ const Contacts = forwardRef(function Contacts(props, ref) {
             )}
 
             <textarea
-              className="w-full bg-indigo-700 font-semibold placeholder-black p-3 mt-5  rounded-lg outline-none"
+              className="w-full bg-amber-50 text-black font-semibold placeholder-amber-900 p-3 mt-5  rounded-lg outline-none"
               type="text"
               placeholder="MESSAGE"
               rows="4"
@@ -145,8 +143,8 @@ const Contacts = forwardRef(function Contacts(props, ref) {
             )}
             <button
               type="submit"
-              className="bg-sky-400 font-semibold text-black mt-5 hover:bg-red p-2 px-5 rounded-lg 
-                        hover:text-white transition duration-500"
+              className="bg-sky-200 font-semibold text-sky-700 mt-5 hover:bg-rose-400 p-2 px-5 rounded-lg 
+                        hover:text-rose-100 transition duration-500  shadow-lg shadow-sky-200/30 hover:shadow-rose-100/30"
               value="Send"
               disabled={sent}
             >

@@ -50,14 +50,14 @@ const MySkills = forwardRef(function MySkills(props, ref) {
             >
               <img
                 alt="skills"
-                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl bg-pink-50 shadow-lg shadow-pink-300"
+                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl bg-pink-50 shadow-lg shadow-pink-300/50"
                 src={skillsImg}
               />
             </div>
           ) : (
             <img
               alt="skills"
-              className="z-10  p-5 rounded-2xl max-w-xl  bg-pink-50 shadow-pink-300 shadow-lg"
+              className="z-10  p-5 rounded-2xl max-w-xl  bg-pink-50 shadow-pink-300/50 shadow-lg"
               src={skillsImg}
             />
           )}
