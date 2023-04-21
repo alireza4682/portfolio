@@ -34,7 +34,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav
       className={`${
         !isMenuToggled ? navebarBackground : ""
-      } z-40 w-full fixed top-0 py-1 `}
+      } z-40 w-full fixed top-0 py-1`}
       ref={awayRef}
     >
       <div className="flex items-center justify-between mx-auto w-5/6">
@@ -95,8 +95,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </button>
         )}
         {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-0 top-20 h-fit bg-blue/50 backdrop-blur-lg w-[300px] pb-12 rounded-bl-xl">
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-cyan-300 font-caudex h-full">
+          <div className="fixed right-1 top-16 h-fit bg-blue/10 backdrop-blur-xl w-[200px] py-4 rounded-xl">
+            <div className="flex flex-col gap-5 items-center text-xl text-cyan-300 font-serif h-full">
               <Link
                 page="Home"
                 selectedPage={selectedPage}

@@ -29,7 +29,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
       </motion.div>
       <div className="md:flex md:justify-between gap-8">
         <motion.div
-          className={`bg-cyan-600 ${testimonialStyles} rounded-xl`}
+          className={`bg-cyan-600 ${testimonialStyles} rounded-xl shadow-cyan-600/50 shadow-lg`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -60,7 +60,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
         </motion.div>
 
         <motion.div
-          className={`bg-rose-600 ${testimonialStyles} rounded-xl`}
+          className={`bg-rose-600 ${testimonialStyles} rounded-xl shadow-rose-600/50 shadow-lg`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
