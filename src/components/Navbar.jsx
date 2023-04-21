@@ -24,14 +24,19 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const awayRef = useRef(null);
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  const navebarBackground = isTopOfPage ? "" : "bg-gray-900/90 ";
+  const navebarBackground = isTopOfPage ? "" : "bg-white/30 backdrop-blur-2xl ";
 
   useOnClickOutside(awayRef, () => {
     setIsMenuToggled(false);
   });
 
   return (
-    <nav className={`${navebarBackground} z-40 w-full fixed top-0 py-1 `}>
+    <nav
+      className={`${
+        !isMenuToggled ? navebarBackground : ""
+      } z-40 w-full fixed top-0 py-1 `}
+      ref={awayRef}
+    >
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-serif text-3xl font-bold text-yellow">
           A<span className="text-rose-400">A</span>
@@ -66,9 +71,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-        ) : (
+        ) : !isMenuToggled ? (
           <button
-            className=" p-1 bg-sky-200 rounded-xl mt-1 shadow-xl shadow-sky-500/60 hover:bg-rose-200 hover:shadow-rose-200/60 transition-all duration-500"
+            className=" p-1 bg-sky-200 rounded-xl my-1 shadow-xl shadow-sky-500/60 hover:bg-rose-200 hover:shadow-rose-200/60 transition-all duration-500 z-10"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img
@@ -77,24 +82,20 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               style={{ width: 32, height: 32 }}
             />
           </button>
+        ) : (
+          <button
+            onClick={() => setIsMenuToggled(!isMenuToggled)}
+            className="p-1 my-1  bg-rose-200 rounded-xl  shadow-xl shadow-rose-500/60 hover:bg-sky-200 hover:shadow-sky-200/60 transition-all duration-500 z-10"
+          >
+            <img
+              alt="close-icon"
+              src={closeIcon}
+              style={{ width: 32, height: 32 }}
+            />
+          </button>
         )}
         {!isAboveSmallScreen && isMenuToggled && (
-          <div
-            className="fixed right-0 top-0 h-fit bg-blue/50 backdrop-blur-lg w-[300px] pb-12 rounded-bl-xl"
-            ref={awayRef}
-          >
-            <div className="flex justify-end">
-              <button
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-                className="p-1 mt-2 mr-8 bg-rose-200 rounded-xl  shadow-xl shadow-rose-500/60 hover:bg-sky-200 hover:shadow-sky-200/60 transition-all duration-500"
-              >
-                <img
-                  alt="close-icon"
-                  src={closeIcon}
-                  style={{ width: 32, height: 32 }}
-                />
-              </button>
-            </div>
+          <div className="fixed right-0 top-20 h-fit bg-blue/50 backdrop-blur-lg w-[300px] pb-12 rounded-bl-xl">
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-cyan-300 font-caudex h-full">
               <Link
                 page="Home"
