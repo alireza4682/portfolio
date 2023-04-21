@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
-import menuIcon from "../assets/menu-icon.png";
-import closeIcon from "../assets/close-icon.png";
+import menuIcon from "../assets/menu-icon.svg";
+import closeIcon from "../assets/close-icon.svg";
 import { useRef } from "react";
 import useOnClickOutside from "../hooks/clickoutside";
 
@@ -68,7 +68,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
-            className=" p-2"
+            className=" p-1 bg-sky-200 rounded-xl mt-1 shadow-xl shadow-sky-500/60 hover:bg-rose-200 hover:shadow-rose-200/60 transition-all duration-500"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img
@@ -80,11 +80,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         )}
         {!isAboveSmallScreen && isMenuToggled && (
           <div
-            className="fixed right-0 top-0 h-full bg-blue/50 backdrop-blur-lg w-[300px]"
+            className="fixed right-0 top-0 h-fit bg-blue/50 backdrop-blur-lg w-[300px] pb-12 rounded-bl-xl"
             ref={awayRef}
           >
-            <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+            <div className="flex justify-end">
+              <button
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+                className="p-1 mt-2 mr-8 bg-rose-200 rounded-xl  shadow-xl shadow-rose-500/60 hover:bg-sky-200 hover:shadow-sky-200/60 transition-all duration-500"
+              >
                 <img
                   alt="close-icon"
                   src={closeIcon}
