@@ -25,18 +25,24 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7 font-caudex">
-            <span className="text-lg text-amber-200">Styling: </span>CSS, SASS,
-            TailwindCSS, Material-UI<br></br>
-            <span className="text-lg text-sky-400">Languages: </span>HTML,
-            JavaScript, TypeScript, python <br></br>
-            <span className="text-lg text-pink-400">Frontend tech: </span>{" "}
+            <span className="text-xl font-bold text-amber-200">Styling: </span>
+            CSS, SASS, TailwindCSS, Material-UI<br></br>
+            <span className="text-xl font-bold text-sky-400">Languages: </span>
+            HTML, JavaScript, TypeScript, python <br></br>
+            <span className="text-xl font-bold text-pink-400">
+              Frontend tech:{" "}
+            </span>{" "}
             Reactjs, Redux, Redux toolkit, Redux saga, Nextjs <br />
-            <span className="text-lg text-orange-400">DB related: </span>{" "}
+            <span className="text-xl font-bold text-orange-400">
+              DB related:{" "}
+            </span>{" "}
             GraphQL, PostgreSQL, MongoDB, Firebase, supabase, tRPC, Prisma ORM{" "}
             <br />
-            <span className="text-lg text-cyan-400">Testing: </span> Jest,
-            Cypress, storybookjs <br />
-            <span className="text-lg text-purple-400">Other: </span>
+            <span className="text-xl font-bold text-cyan-400">
+              Testing:{" "}
+            </span>{" "}
+            Jest, Cypress, storybookjs <br />
+            <span className="text-xl font-bold text-purple-400">Other: </span>
             Git, Github Actions, Docker, Nodejs, Expressjs, Passportjs,
             Framer-motion
           </p>
@@ -66,7 +72,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
 
       <div className="md:flex md:justify-between mt-16 gap-32">
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 mt-10 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -79,7 +85,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">01</p>
-              <p className="font-caudex font-semibold text-3xl mt-3 bg-cyan-700 p-1 rounded-l-lg shadow-lg pl-2">
+              <p className="font-caudex font-semibold text-3xl mt-3 bg-cyan-700 p-1 rounded-l-lg shadow-xl pl-2">
                 Frontend engineer
               </p>
             </div>
@@ -106,7 +112,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">02</p>
-              <p className="font-caudex font-semibold text-3xl mt-3 bg-rose-500 p-1 rounded-l-lg shadow-lg pl-2">
+              <p className="font-caudex font-semibold text-3xl mt-3 bg-rose-500 p-1 rounded-l-lg shadow-xl pl-2">
                 team experience
               </p>
             </div>
@@ -132,7 +138,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-serif font-semibold text-5xl">03</p>
-              <p className="font-caudex font-semibold text-3xl mt-3 bg-amber-400 p-1 rounded-l-lg shadow-lg pl-2">
+              <p className="font-caudex font-semibold text-3xl mt-3 bg-amber-400 p-1 rounded-l-lg shadow-xl pl-2">
                 Computer Science
               </p>
             </div>

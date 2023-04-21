@@ -151,7 +151,7 @@ const Contacts = forwardRef(function Contacts(props, ref) {
               SEND ME A MESSAGE
             </button>
           </form>
-          <div>{`${sent ? "sent" : ""}`}</div>
+          <div className="text-xl">{`${sent ? "🤘" : ""}`}</div>
         </motion.div>
       </div>
     </section>
