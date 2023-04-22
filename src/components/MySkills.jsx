@@ -1,7 +1,7 @@
 import LineGradient from "./LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import skillsImg from "../assets/skills2.png";
+import skillsImg from "../assets/skills3.svg";
 import { forwardRef } from "react";
 
 const MySkills = forwardRef(function MySkills(props, ref) {
@@ -10,7 +10,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
     <section id="skills" className="pt-10 pb-24" ref={ref}>
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
-          className="md:w-1/3"
+          className="md:w-2/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -48,7 +48,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           </p>
         </motion.div>
 
-        <div className="mt-16 md:mt-0">
+        <div className="mt-16 md:mt-0 w-[800px]">
           {isAboveLarge ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
@@ -56,14 +56,14 @@ const MySkills = forwardRef(function MySkills(props, ref) {
             >
               <img
                 alt="skills"
-                className="z-10 bg-fuchsia-200-200 p-10 rounded-2xl max-w-2xl bg-pink-50 shadow-lg shadow-pink-300/50"
+                className="z-10   rounded-2xl max-w-[800px]  shadow-lg shadow-gray-800/50 w-full"
                 src={skillsImg}
               />
             </div>
           ) : (
             <img
               alt="skills"
-              className="z-10  p-5 rounded-2xl max-w-xl  bg-pink-50 shadow-pink-300/50 shadow-lg"
+              className="z-10   rounded-2xl max-w-xl   shadow-indigo-800/50 shadow-lg"
               src={skillsImg}
             />
           )}
