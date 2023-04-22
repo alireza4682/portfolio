@@ -48,7 +48,7 @@ const Landing = forwardRef(function Landing({ setSelectedPage }, ref) {
           <h1 className="text-6xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
             Alireza
             <span
-              className="xs:relative xs:text-rose-400 xs:font-semibold z-20 
+              className="xs:relative xs:text-pink-700 xs:font-semibold z-20 
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
               <h2>Arezoumandan</h2>

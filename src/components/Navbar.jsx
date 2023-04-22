@@ -73,30 +73,38 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : !isMenuToggled ? (
           <button
-            className=" p-1 bg-sky-200 rounded-xl my-1 shadow-xl shadow-sky-500/60 hover:bg-rose-200 hover:shadow-rose-200/60 transition-all duration-500 z-10"
+            className=" p-2 bg-sky-500 border-4  border-sky-400 rounded-full my-1 mr-8  transition-all duration-500 z-10"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img
               alt="menu-icon"
               src={menuIcon}
-              style={{ width: 32, height: 32 }}
+              style={{ width: 24, height: 24 }}
             />
           </button>
         ) : (
           <button
             onClick={() => setIsMenuToggled(!isMenuToggled)}
-            className="p-1 my-1  bg-rose-200 rounded-xl  shadow-xl shadow-rose-500/60 hover:bg-sky-200 hover:shadow-sky-200/60 transition-all duration-500 z-10"
+            className="p-2 my-1  bg-rose-500 border-4 border-rose-400 rounded-full  transition-all duration-500 z-10"
           >
             <img
               alt="close-icon"
               src={closeIcon}
-              style={{ width: 32, height: 32 }}
+              style={{ width: 24, height: 24 }}
             />
           </button>
         )}
-        {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-1 top-16 h-fit bg-blue/10 backdrop-blur-xl w-[200px] py-4 rounded-xl">
-            <div className="flex flex-col gap-5 items-center text-xl text-cyan-300 font-serif h-full">
+        {!isAboveSmallScreen && (
+          <div
+            className={`fixed right-1 top-16 h-fit bg-stone-600/20 backdrop-blur-xl w-[200px] py-4 rounded-lg ${
+              !isMenuToggled ? "scale-0 -translate-y-3/4" : "scale-100"
+            } transition-all duration-300`}
+          >
+            <div
+              className={`flex flex-col gap-5 items-center text-xl text-stone-500 font-serif h-full ${
+                !isMenuToggled ? "-translate-y-3/4" : ""
+              } transition-all duration-300  `}
+            >
               <Link
                 page="Home"
                 selectedPage={selectedPage}
