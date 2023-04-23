@@ -99,12 +99,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {!isAboveSmallScreen && (
           <div
             className={`fixed right-1 top-16 h-fit bg-stone-600/20 backdrop-blur-xl w-[200px] py-4 rounded-lg ${
-              !isMenuToggled ? "scale-0 -translate-y-3/4" : "scale-100"
+              !isMenuToggled ? "scale-0 -translate-y-1/2" : "scale-100"
             } transition-all duration-300`}
           >
             <div
               className={`flex flex-col gap-5 items-center text-xl text-stone-500 font-serif h-full ${
-                !isMenuToggled ? "-translate-y-3/4" : ""
+                !isMenuToggled ? "-translate-y-1/2" : ""
               } transition-all duration-300  `}
             >
               <Link
