@@ -45,7 +45,7 @@ const Landing = forwardRef(function Landing({ setSelectedPage }, ref) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="text-6xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
+          <h1 className="md:text-6xl text-4xl z-10 text-center md:text-start font-serif text-yellow font-semibold">
             Alireza
             <span
               className="relative text-pink-700 font-semibold z-20 

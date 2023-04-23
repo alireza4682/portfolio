@@ -36,10 +36,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav
       className={`${
         !isMenuToggled ? navebarBackground : ""
-      } z-40 w-screen fixed top-0 py-1`}
+      } z-40 fixed top-0 py-1`}
       ref={awayRef}
     >
-      <div className="flex items-center justify-between mx-auto w-5/6 absolute">
+      <div className="flex items-center justify-between mx-auto w-5/6 fixed">
         <h4 className="font-serif text-3xl font-bold text-yellow">
           A<span className="text-rose-400">A</span>
         </h4>
@@ -75,7 +75,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : !isMenuToggled ? (
           <button
-            className=" p-2 bg-sky-500 border-4  border-sky-400 rounded-full my-1 mr-8  transition-all duration-500 z-10"
+            className=" p-2 bg-sky-500 border-4  border-sky-400 rounded-full my-1   transition-all duration-500 z-10"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img
