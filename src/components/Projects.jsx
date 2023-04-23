@@ -71,25 +71,33 @@ const Projects = forwardRef(function Projects(props, ref) {
           variants={container}
         >
           <div
-            className="flex justify-center text-center items-center  bg-gradient-to-r from-pink-900 to-indigo-600 max-w-[600px] max-h-[600px]
+            className="flex justify-center text-center items-center  bg-none max-w-[600px] max-h-[600px]
                 text-2xl font-serif font-semibold bg-pos-0 hover:bg-pos-100 bg-size-200 transition-all duration-1000"
           >
             <h1 className="text-amber-50">Smooth user experience</h1>
           </div>
-          <Project title="book store" text={"SPA Reactjs SASS"} />
-          <Project title="e-commerce" text={"Nextjs TypeScript SASS GraphQL"} />
+          <Project
+            title="twitter"
+            text={
+              "twitter clone, Nextjs, TypeScript, TailwindCSS, trpc, prisma, tanstack query, clerk  ...coming soon"
+            }
+          />
+          <Project
+            title="portfolio"
+            text={"React, tailwindCss, React-hook-form, framer motion, emailjs"}
+          />
 
           <Project
             title="e-commerce2"
             text={"SPA Reactjs TypeScript SASS Redux-Saga Firebase"}
           />
           <Project
-            title="DataMuse FrontEnd"
+            title="dataMuse"
             text={"Reactjs TypeScript TailwindCSS Redux-toolkit"}
           />
 
           <div
-            className="flex justify-center text-center items-center  bg-gradient-to-r from-purple-600 to-fuchsia-900 max-w-[600px] max-h-[600px]
+            className="flex justify-center text-center items-center  bg-none max-w-[600px] max-h-[600px]
                 text-xl md:text-2xl font-serif font-semibold bg-pos-0 hover:bg-pos-100 bg-size-200 transition-all duration-1000"
           >
             <h1 className="text-amber-50">Scalable and performant</h1>
