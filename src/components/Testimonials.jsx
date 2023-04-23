@@ -50,11 +50,11 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
             <p className="font-secular text-6xl font-extrabold absolute -top-[100px]">
               "
             </p>
-            <p className="text-justify text-md  font-caudex relative -top-[40px]">
+            <p className="text-ellipsis text-md  font-caudex relative -top-[40px]">
               Alireza is a team player and always willing to take on different
-              roles and responsibilities in order to help the team reach its
-              goals.their excellent communication skills make collaborating with
-              them an absolute breeze.
+              roles and responsibilities in order to help the team reach their
+              goals. his excellent communication skills make collaborating with
+              him an absolute breeze.
             </p>
           </div>
         </motion.div>
