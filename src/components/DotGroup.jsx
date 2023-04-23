@@ -1,9 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
-  const selectedStyles = `relative bg-yellow-500 before:absolute before:w-6 before:h-6 
-  before:rounded-full before:border-2 before:border-yellow-500 before:left-[-50%] 
-  before:top-[-50%]`;
+  const selectedStyles = `relative bg-yellow  transition delay-500 duration-100 animate-ping`;
 
   const navCategories = [
     "home",
@@ -19,10 +17,41 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         <AnchorLink
           className={`${selectedPage === cat ? selectedStyles : "bg-gray-500"}
             w-3 h-3 rounded-full`}
-          href={`#${cat}`}
-          onClick={() => setSelectedPage(cat)}
-        />;
-      })}
+        href="#home"
+        onClick={() => setSelectedPage("home")}
+      />
+      <AnchorLink
+        className={`${
+          selectedPage === "skills" ? selectedStyles : "bg-gray-500"
+        }
+            w-3 h-3 rounded-full`}
+        href="#skills"
+        onClick={() => setSelectedPage("skills")}
+      />
+      <AnchorLink
+        className={`${
+          selectedPage === "projects" ? selectedStyles : "bg-gray-500"
+        }
+            w-3 h-3 rounded-full`}
+        href="#projects"
+        onClick={() => setSelectedPage("projects")}
+      />
+      <AnchorLink
+        className={`${
+          selectedPage === "testimonials" ? selectedStyles : "bg-gray-500"
+        }
+            w-3 h-3 rounded-full`}
+        href="#testimonials"
+        onClick={() => setSelectedPage("testimonials")}
+      />
+      <AnchorLink
+        className={`${
+          selectedPage === "contacts" ? selectedStyles : "bg-gray-500"
+        }
+            w-3 h-3 rounded-full`}
+        href="#contacts"
+        onClick={() => setSelectedPage("contacts")}
+      />
     </div>
   );
 };
