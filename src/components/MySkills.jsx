@@ -63,7 +63,7 @@ const MySkills = forwardRef(function MySkills(props, ref) {
           ) : (
             <img
               alt="skills"
-              className="z-10  rounded-2xl max-w-screen-sm shadow-indigo-800/50 shadow-lg "
+              className="z-10  rounded-2xl w-1/3 shadow-indigo-800/50 shadow-lg "
               src={skillsImg}
             />
           )}
