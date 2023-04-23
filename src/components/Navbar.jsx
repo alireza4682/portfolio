@@ -36,10 +36,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav
       className={`${
         !isMenuToggled ? navebarBackground : ""
-      } z-40 w-full fixed top-0 py-1`}
+      } z-40 w-screen fixed top-0 py-1`}
       ref={awayRef}
     >
-      <div className="flex items-center justify-between mx-auto w-5/6">
+      <div className="flex items-center justify-between mx-auto w-5/6 absolute">
         <h4 className="font-serif text-3xl font-bold text-yellow">
           A<span className="text-rose-400">A</span>
         </h4>
