@@ -29,7 +29,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
       </motion.div>
       <div className="md:flex md:justify-between gap-8">
         <motion.div
-          className={`bg-cyan-600 ${testimonialStyles} rounded-xl shadow-cyan-600/50 shadow-lg`}
+          className={`bg-cyan-600/50 backdrop-blur-3xl ${testimonialStyles} rounded-xl shadow-cyan-600/50 shadow-lg`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +50,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
             <p className="font-secular text-6xl font-extrabold absolute -top-[100px]">
               "
             </p>
-            <p className="text-ellipsis text-md  font-caudex relative -top-[40px]">
+            <p className="text-clip text-xs md:text-sm  font-caudex relative -top-[40px]">
               Alireza is a team player and always willing to take on different
               roles and responsibilities in order to help the team reach their
               goals. his excellent communication skills make collaborating with
@@ -60,7 +60,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
         </motion.div>
 
         <motion.div
-          className={`bg-rose-600 ${testimonialStyles} rounded-xl shadow-rose-600/50 shadow-lg`}
+          className={`bg-rose-600/50 backdrop-blur-3xl ${testimonialStyles} rounded-xl shadow-rose-600/50 shadow-lg`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -81,7 +81,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
             <p className=" text-6xl font-secular font-extrabold absolute -top-[100px]">
               "
             </p>
-            <p className=" text-md font-caudex text-justify relative -top-[40px]">
+            <p className="text-clip text-xs md:text-sm  font-caudex relative -top-[40px]">
               Alireza is a creative and analytical problem solver, always
               striving to find the most efficient solution. He is also a hard
               worker, consistently putting in the extra effort to ensure that
